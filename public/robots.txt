@@ -1,0 +1,4 @@
+Host: www.venerasalon.pro
+Sitemap: http://venerasalon.pro/sitemap.xml
+User-agent: *
+Disallow: 
