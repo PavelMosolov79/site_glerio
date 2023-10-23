@@ -15,38 +15,41 @@ export default function About() {
 
   const project = findProjectById(id);
 
+  if (!project) {
+    return <div>Проект не найден</div>;
+  }
+
   return (
     <main className='About'>
-        <AboutSection/>
+        <AboutSection />
         <div className='about__return'>
             <h2>Галерея</h2>
             <Link className='about__return-link' href="/">Назад</Link>
         </div>
         <h1>{project.name}</h1>
-        {project.description !== 'none' && (
-            <p>{project.description}</p>
-        )}
+        {project.description !== 'none' && <p>{project.description}</p>}
         <div className='aboyt__layout-photos'>
             <div className='about__main-photo'>
-                <img src={project.image} alt={`Главное фото`} />
+                {project.image && <img src={project.image} alt={`Главное фото`} />}
             </div>
-            <div className='about__main-mini__photo' style={{ display: project.photo[0].path === 'none' ? 'none' : 'block' }}>
-                {project.photo[0].path !== 'none' &&
+            <div className='about__main-mini__photo' style={{ display: project.photo[0]?.path === 'none' ? 'none' : 'block' }}>
+                {project.photo[0] && project.photo[0].path !== 'none' && (
                     project.photo.map((photo, index) => (
-                    <img key={index} src={photo.path} alt={`Фото ${index + 1}`} />
-                ))}
+                        <img key={index} src={photo.path} alt={`Фото ${index + 1}`} />
+                    ))
+                )}
             </div>
         </div>
         <div className='about__video'>
-            {project.video !== 'none' && (
+            {project.video && project.video !== 'none' && (
                 <div>
-                <h2>Видео</h2>
-                <div className='about__video-layout'>
-                    <video controls>
-                        <source src={project.video} type="video/mp4" />
-                        Ваш браузер не поддерживает видео.
-                    </video>
-                </div>
+                    <h2>Видео</h2>
+                    <div className='about__video-layout'>
+                        <video controls>
+                            <source src={project.video} type="video/mp4" />
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                    </div>
                 </div>
             )}
         </div>
@@ -58,19 +61,19 @@ export default function About() {
         <div className='about__lamp'>
             <h3>Лампы используемые в проекте</h3>
             <div className='about__lamp-blocks'>
-                {project.lamp.map((lamp) => (
+                {project.lamp && project.lamp.map((lamp) => (
                     <div className='about__lamp-block' key={lamp.id}>
                         <p>Название лампы: {lamp.name}</p>
                         <p>Артикул: {lamp.article}</p>
                         <p>Количество: {lamp.quantity}</p>
                         <div className='about__lamp-block__img'>
-                            <img src={`${lamp.path}/${lamp.id}`} alt={lamp.name} />
+                            {lamp.path && <img src={`${lamp.path}/${lamp.id}`} alt={lamp.name} />}
                         </div>
                     </div>
                 ))}
             </div>
         </div>
-        <FoterSection/>
+        <FoterSection />
     </main>
   );
 }
