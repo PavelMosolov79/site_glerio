@@ -1,0 +1,519 @@
+{
+    "projects": [
+      {
+        "id": "1",
+        "name": "ТК 'Парнас Сити'",
+        "image": "all_project/project1.jpg",
+        "video": "none",
+        "place": "street",
+        "folder": "namefolder",
+        "data": "30.11.2019",
+        "adress": "Санкт-Петербург, ул. Михаила Дудина д. 6, к.1",
+        "activity": "shop",
+        "lamp": [
+          {
+            "id": "1-streat.png",
+            "name": "Glerio 'Universal' 50 Вт",
+            "article": "01A-50D-4U",
+            "quantity": 25,
+            "path": "/lamp"
+          },
+          {
+            "id": "8-streat.png",
+            "name": "Glerio 'Universal' 152 Вт",
+            "article": "01A-152D-4U",
+            "quantity": 10,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "Parnas2.jpg"
+          }
+        ],
+        "description": "«Парнас» - Торговый Комплекс. Задача: Освещение  территории Торгового комплекса." 
+      },
+      {
+        "id": "2",
+        "name": "Склад",
+        "image": "all_project/project2.jpg",
+        "video": "none",
+        "place": "room",
+        "folder": "namefolder",
+        "data": "18.10.2019",
+        "adress": "Санкт-Петербург, ул. Коли Томчака, д. 17-19, литер А",
+        "activity": "production",
+        "lamp": [
+          {
+            "id": "1-streat.png",
+            "name": "Glerio 'Universal' 25 Вт",
+            "article": "01A-25D-4U",
+            "quantity": 10,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "none"
+          }
+        ],
+        "description": "none" 
+      },
+      {
+        "id": "3",
+        "name": "Освещение г. Архангельск",
+        "image": "all_project/project3.jpg",
+        "video": "none",
+        "place": "street",
+        "folder": "namefolder",
+        "data": "10.03.2020 - наст. время",
+        "adress": "о. Кего, Талажский авиагородок, набережная Северной Двины, ул. Логинова, ул. Силикатчиков, ул. Чкалова, ул. Лушева, ул. Абрамова, ул. Гагарина и пр.",
+        "activity": "hcs",
+        "lamp": [
+          {
+            "id": "2-streat.png",
+            "name": "Glerio 'Магистраль' 25 Вт",
+            "article": "01A-25S-4K+",
+            "quantity": 60,
+            "path": "/lamp"
+          },
+          {
+            "id": "2-streat.png",
+            "name": "Glerio 'Universal' 38 Вт",
+            "article": "01A-38D-4K+",
+            "quantity": 210,
+            "path": "/lamp"
+          },
+          {
+            "id": "2-streat.png",
+            "name": "Glerio 'Магистраль' 38 Вт",
+            "article": "01A-38S-4K+",
+            "quantity": 354,
+            "path": "/lamp"
+          },
+          {
+            "id": "2-streat.png",
+            "name": "Glerio 'Магистраль' 76 Вт",
+            "article": "01A-76S-4K+",
+            "quantity": 32,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "Arhangelsk2.jpg"
+          },
+          {
+            "path": "Arhangelsk3.jpg"
+          }
+        ],
+        "description": "none" 
+      },
+      {
+        "id": "4",
+        "name": "Производственное помещение",
+        "image": "all_project/project4.jpg",
+        "video": "video/Production-premises1.MP4",
+        "place": "room",
+        "folder": "namefolder",
+        "data": "30.04.2020",
+        "adress": "none",
+        "activity": "production",
+        "lamp": [
+          {
+            "id": "1-streat.png",
+            "name": "Glerio 'Universal' 25 Вт",
+            "article": "01A-25D-4U",
+            "quantity": 16,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "none"
+          }
+        ],
+        "description": "none" 
+      },
+      {
+        "id": "5",
+        "name": "Гипермаркет 'О'Кей'",
+        "image": "all_project/project5.jpg",
+        "video": "none",
+        "place": "room",
+        "folder": "namefolder",
+        "data": "22.05.2020",
+        "adress": "Санкт-Петербург, ул. Руставели, 43",
+        "activity": "shop",
+        "lamp": [
+          {
+            "id": "6-room.png",
+            "name": "Glerio Line Shell 24",
+            "article": "052P-24D-4P-P",
+            "quantity": 192,
+            "path": "/lamp"
+          },
+          {
+            "id": "16-room.png",
+            "name": "Glerio Semisphere 900",
+            "article": "02P-900D-4P",
+            "quantity": 31,
+            "path": "/lamp"
+          },
+          {
+            "id": "16-room.png",
+            "name": "Glerio Semisphere 1200",
+            "article": "02P-1200D-4P",
+            "quantity": 12,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "none"
+          }
+        ],
+        "description": "«О’кей» — российская сеть гипермаркетов. Задача: Осветить прикассовую зону и торговые ряды, Площадь 9400 квадратов. Требования по освещению: 200 лк." 
+      },
+      {
+        "id": "6",
+        "name": "Автосалон 'Максимум'",
+        "image": "all_project/project6.jpg",
+        "video": "none",
+        "place": "room",
+        "folder": "namefolder",
+        "data": "02.06.2020 - наст. время",
+        "adress": "Санкт-Петербург, ул. Руставели 53к1; ул. Торфяная 8к3, п. Непокорённых 47",
+        "activity": "shop",
+        "lamp": [
+          {
+            "id": "1-room.png",
+            "name": "Glerio Office Special 24 Вт",
+            "article": "042P-24D-4V-K",
+            "quantity": 47,
+            "path": "/lamp"
+          },
+          {
+            "id": "5-room.png",
+            "name": "Glerio Line 24 Вт",
+            "article": "051P-24D-4N-P",
+            "quantity": 135,
+            "path": "/lamp"
+          },
+          {
+            "id": "5-room.png",
+            "name": "Glerio Line 36 Вт",
+            "article": "051P-36D-4N-P",
+            "quantity": 52,
+            "path": "/lamp"
+          },
+          {
+            "id": "9-room.png",
+            "name": "Glerio Line Ultra 48 Вт",
+            "article": "054P-48D-4N-MP",
+            "quantity": 195,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "Maximum1.jpeg"
+          },
+          {
+            "path": "Maximum2.jpeg"
+          }
+        ],
+        "description": "Максимум-  Крупнейший салон автомобилей с пробегом в г.Санк-Петербурге. Задача: Освещение залов автосалонов, общей  площадью более 10000 м2." 
+      },
+      {
+        "id": "7",
+        "name": "Загородный дом",
+        "image": "all_project/project7.jpg",
+        "video": "none",
+        "place": "street",
+        "folder": "namefolder",
+        "data": "27.10.2020",
+        "adress": "Подмосковье",
+        "activity": "hcs",
+        "lamp": [
+          {
+            "id": "1-streat.png",
+            "name": "Glerio 'Магистраль' 25 Вт",
+            "article": "01A-25S-4U",
+            "quantity": 20,
+            "path": "/lamp"
+          },
+          {
+            "id": "1-streat.png",
+            "name": "Glerio 'Universal' 25 Вт",
+            "article": "01A-25D-4U",
+            "quantity": 5,
+            "path": "/lamp"
+          },
+          {
+            "id": "1-streat.png",
+            "name": "Glerio 'Universal' 38 Вт",
+            "article": "01A-38D-4U",
+            "quantity": 10,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "none"
+          }
+        ],
+        "description": "none" 
+      },
+      {
+        "id": "8",
+        "name": "Улица п. Приобье",
+        "image": "all_project/project8.jpg",
+        "video": "video/Priobie1.mp4",
+        "place": "street",
+        "folder": "namefolder",
+        "data": "20.11.2020 - наст. время",
+        "adress": "Ханты-Мансийский а.о., Октябрьский район, п. Приобье",
+        "activity": "hcs",
+        "lamp": [
+          {
+            "id": "4-streat.png",
+            "name": "Glerio 'Магистраль' 76 Вт",
+            "article": "01A-76S-5K+",
+            "quantity": 377,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "none"
+          }
+        ],
+        "description": "none" 
+      },
+      {
+        "id": "9",
+        "name": "Придомовая территория, парковка",
+        "image": "all_project/project9.jpg",
+        "video": "none",
+        "place": "street",
+        "folder": "namefolder",
+        "data": "24.11.2020",
+        "adress": "Санкт-Петербург, г. Ломоносов, ул. Федюнинского, д. 3Б",
+        "activity": "hcs",
+        "lamp": [
+          {
+            "id": "3-streat.png",
+            "name": "Glerio 'Universal' 50 Вт",
+            "article": "01A-50D-4U",
+            "quantity": 8,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "none"
+          }
+        ],
+        "description": "Освещение придомовой территории. Задача: Освещение парковочной территории  площадью 1500 м2. Требования по освещению до 10 лк." 
+      },
+      {
+        "id": "10",
+        "name": "Офисное помещение",
+        "image": "all_project/project10.jpg",
+        "video": "none",
+        "place": "room",
+        "folder": "namefolder",
+        "data": "01.12.2020",
+        "adress": "Санкт-Петербург, г. Ломоносов, ул. Федюнинского, д. 3Б",
+        "activity": "shop",
+        "lamp": [
+          {
+            "id": "1-streat.png",
+            "name": "Glerio Line 24 Вт",
+            "article": "051P-24D-4N-M",
+            "quantity": 40,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "none"
+          }
+        ],
+        "description": "none" 
+      },
+      {
+        "id": "11",
+        "name": "Проселочные дороги",
+        "image": "all_project/project11.jpg",
+        "video": "none",
+        "place": "street",
+        "folder": "namefolder",
+        "data": "05.12.2020",
+        "adress": "Свердловская обл.",
+        "activity": "hcs",
+        "lamp": [
+          {
+            "id": "5-room.png",
+            "name": "Glerio 'Магистраль' 38 Вт",
+            "article": "01A-38S-4K",
+            "quantity": 45,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "none"
+          }
+        ],
+        "description": "none" 
+      },
+      {
+        "id": "12",
+        "name": "Школа",
+        "image": "all_project/project12.jpg",
+        "video": "none",
+        "place": "room",
+        "folder": "namefolder",
+        "data": "05.12.2020",
+        "adress": "Свердловская обл. г. Екатеринбург",
+        "activity": "shop",
+        "lamp": [
+          {
+            "id": "5-room.png",
+            "name": "Glerio Line 24 Вт",
+            "article": "051P-24D-4N-M",
+            "quantity": 32,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "School2.jpg"
+          }
+        ],
+        "description": "Освещение учебных классов. Задача: Осветить учебные класс площадью 120 м2 Требование по освещению на рабочей поверхности 500лк." 
+      },
+      {
+        "id": "13",
+        "name": "ТЦ 'Дунай'",
+        "image": "all_project/project13.jpg",
+        "video": "none",
+        "place": "street",
+        "folder": "namefolder",
+        "data": "06.12.2020",
+        "adress": "Санкт-Петербург, Дунайский проспект, 27 к1",
+        "activity": "shop",
+        "lamp": [
+          {
+            "id": "8-streat.png",
+            "name": "Glerio 'Universal' 200 Вт",
+            "article": "01A-200D-4U-22S",
+            "quantity": 10,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "none"
+          }
+        ],
+        "description": "none" 
+      },
+      {
+        "id": "14",
+        "name": "Улицы г. Улан-Уде",
+        "image": "all_project/project14.jpg",
+        "video": "video/Ylan-yde1.mp4",
+        "place": "street",
+        "folder": "namefolder",
+        "data": "18.01.2021",
+        "adress": "Республики Бурятия, г Улан-Удэ",
+        "activity": "hcs",
+        "lamp": [
+          {
+            "id": "1-streat.png",
+            "name": "Glerio 'Магистраль' 38 Вт",
+            "article": "01A-25S-5U+",
+            "quantity": 1600,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "Ylan-yde1.jpg"
+          }
+        ],
+        "description": "none" 
+      },
+      {
+        "id": "15",
+        "name": "Ателье 'С иголочки'",
+        "image": "all_project/project15.jpg",
+        "video": "none",
+        "place": "room",
+        "folder": "namefolder",
+        "data": "14.07.2023",
+        "adress": "г. Саратов",
+        "activity": "production",
+        "lamp": [
+          {
+            "id": "6-room.png",
+            "name": "GLERIO Line Shell 72 Вт",
+            "article": "92P-72D-5P-P",
+            "quantity": 36,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "Atelier2.jpg"
+          },
+          {
+            "path": "Atelier3.jpg"
+          },
+          {
+            "path": "Atelier4.jpg"
+          }
+        ],
+        "description": "Ателье 'С Иголочки' - профессиональная мастерская по пошиву одежды.  Помещение площадью 468  м2. Требования по освещению -1600 лк на рабочей поверхности." 
+      },
+      {
+        "id": "16",
+        "name": "Стройлабкомплект",
+        "image": "all_project/project16.jpg",
+        "video": "none",
+        "place": "room",
+        "folder": "namefolder",
+        "data": "29.12.2022",
+        "adress": "г.Новосибирск",
+        "activity": "production",
+        "lamp": [
+          {
+            "id": "1-room.png",
+            "name": "GLERIO Office Casual 24 Вт арт. ",
+            "article": "81P-24D-4V-M",
+            "quantity": 15,
+            "path": "/lamp"
+          },
+          {
+            "id": "14-room.png",
+            "name": "GLERIO Indoor 8 Вт. арт",
+            "article": "10P-8D-4N-MP",
+            "quantity": 10,
+            "path": "/lamp"
+          }
+        ],
+        "photo": [
+          {
+            "path": "Stroylab2.jpeg"
+          },
+          {
+            "path": "Stroylab3.jpeg"
+          }
+        ],
+        "description": "СтройЛабКомплект Комплексный поставщик  лабораторного оборудования. Задача: Освещение чистых лабораторных помещений. Требование по освещению 500лк на рабочей поверхности." 
+      }
+    ]
+  }
