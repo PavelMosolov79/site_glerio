@@ -1,11 +1,4 @@
-
-
 @media (min-width: 761px) {
-    @font-face {
-        font-family: 'KronaOne'; 
-        src: url(/KronaOne-Regular.ttf); 
-    }
-
     @font-face {
         font-family: 'Montserrat-rus'; 
         src: url(/Montserrat-Alternates.ttf); 
@@ -15,34 +8,9 @@
         --index: calc(1vw + 1vh);
     }
 
-    @keyframes RotationOneMoon {
-        from {
-            /* transition: 0.8s; */
-            opacity: 0.3;
-            transform: rotate(0deg);
-        }
-        to {
-            /* transition: 0.8s; */
-            opacity: 0.3;
-            transform: rotate(360deg);
-        }
-    }
-
-    @keyframes RotationTwoSun {
-        from {
-            transition: 0.8s;
-            transform: rotate(0deg);
-        }
-        to {
-            transition: 0.8s;
-            transform: rotate(-360deg);
-        }
-    }
-
     footer{
         display: flex;
         justify-content: center;
-        align-items: start;
         width: 100%;
         height: 20vh;
         margin-top: 30px;
@@ -60,7 +28,7 @@
     .foter__block-menu{
         display: flex;
         justify-content: center;
-        width: calc(var(--index) * 20);
+        width: calc(var(--index) * 23);
         height: 14vh;
     }
 
@@ -77,7 +45,7 @@
         padding: calc(var(--index) * 0.5);
         margin: 5px;
         text-align: center;
-        font-family: 'KronaOne';
+        font-family: 'Montserrat-rus';
         font-weight: 600;
         color: #ffffff;
         font-size: calc(var(--index) * 0.6);
@@ -105,7 +73,7 @@
         transition: 0.8s;
         
         text-align: center;
-        font-family: 'KronaOne';
+        font-family: 'Montserrat-rus';
         font-weight: 600;
         color: #ffffff;
         font-size: calc(var(--index) * 0.55);
@@ -129,7 +97,7 @@
         border-radius: calc(var(--index) * 2.5);
         transition: 0.8s;
         
-        font-family: 'KronaOne';
+        font-family: 'Montserrat-rus';
         font-weight: 600;
         color: #ffffff;
         font-size: calc(var(--index) * 0.55);

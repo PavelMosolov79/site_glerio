@@ -1,4 +1,4 @@
-@media (min-width: 761px) {
+@media (max-width: 761px) {
     :root {
         --index: calc(1vw + 1vh);
     }
@@ -27,7 +27,7 @@
         margin: 0px;
         margin-top: calc(var(--index) * 2);
         font-size: calc(var(--index) * 2);
-        text-align: center;
+        text-align: right;
     }
 
     .project__title-text h3{
@@ -42,8 +42,8 @@
 
     .project__buttons button {
         text-decoration: none; /* Убираем стандартное подчеркивание текста */
-        margin: 25px 15px;
-        font-size: calc(var(--index) * 0.7); /* Добавляем отступы для кнопок */
+        margin: 10px 5px;
+        font-size: calc(var(--index) * 1); /* Добавляем отступы для кнопок */
         border: none; /* Убираем границу кнопок */
         cursor: pointer;
         background-color: transparent;
@@ -133,8 +133,9 @@
 
     .project__title__img img{
         padding-top: 15px;
-        width: 64px;
-        height: 64px;
+        padding-left: 5px;
+        width: 32px;
+        height: 32px;
         /* top: -10px; */
         /* left: calc(var(--index) * 1); */
     }

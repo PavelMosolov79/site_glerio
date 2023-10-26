@@ -2,11 +2,17 @@
 
 
 import Link from "next/link"
+import React, { useState } from 'react';
 
-import React from 'react';
 import BackgroundSlider from './Slider/BackgroundSlider';
 
 const MainSection = ({ func }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="main">
       <div className="main__container">
@@ -31,20 +37,31 @@ const MainSection = ({ func }) => {
                 </li>
               </ul>
             </nav>
-            {/* <div class="main__container-header__layout-dropdown">
-              <button class="main__container-header__layout-dropbtn">
-                <img src="./menu.svg" alt="button menu"/>
+            <div className="main__container-header__layout-dropdown">
+              <button className="main__container-header__layout-dropbtn" onClick={toggleMenu}>
+                <img src="./svg-files/menu.svg" alt="button menu"/>
               </button>
-              <div class="main__container-header__layout-dropdown-content">
-                <a href="/services/hairdresser">Услуги парикмахера</a>
-                <a href="/services/manicure">Маникюр и педикюр</a>
-                <a href="/services/depilation">Депиляция</a>
-                <a href="/services/eyebrows">Брови и ресницы</a>
-                <a href="/news">Акции</a>
-                <a href="/vacancy">Вакансии</a>
-                <a href="/contacts">Контакты</a>
+              <div className="menu__drop">
+                {isMenuOpen && (
+                  <div class="main__container-header__layout-dropdown-content">
+                    <ul>
+                      <li>        
+                        <Link href={`/`}>Города и поселки</Link>
+                      </li>
+                      <li>
+                        <Link href={`/production`}>Производство и<br/>промышленность</Link>
+                      </li>
+                      <li>
+                        <Link href={`/shop`}>Офисы и магазины</Link>
+                      </li>
+                      <li>
+                        <Link href={`/hcs`}>ЖКХ и прочее<br/>строительство</Link>
+                      </li>
+                    </ul>
+                  </div>
+                )}
               </div>
-            </div> */}
+            </div>
           </div>
         </header>
         <BackgroundSlider/>

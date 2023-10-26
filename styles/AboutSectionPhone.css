@@ -1,4 +1,4 @@
-@media (min-width: 761px) {
+@media (max-width: 761px) {
     @font-face {
         font-family: 'Montserrat-rus'; 
         src: url(/Montserrat-Alternates.ttf); 
@@ -57,6 +57,7 @@
 
     .aboyt__layout-photos{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
@@ -113,7 +114,8 @@
     }
 
     .about__information p{
-        font-size: calc(var(--index) * 0.5);
+        width: calc(var(--index) * 15);
+        font-size: calc(var(--index) * 0.8);
         font-family: 'Montserrat-rus';
     }
 
@@ -125,6 +127,7 @@
 
     .about__lamp-blocks{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
     }
 
@@ -132,13 +135,12 @@
         margin: 10px;
         padding: 10px;
         width: calc(var(--index) * 15);
-        height: calc(var(--index) * 15);
         background-color: rgb(255, 255, 255);
     }
 
     .about__lamp-block p{
         padding: 0px;
-        font-size: calc(var(--index) * 0.6);
+        font-size: calc(var(--index) * 1);
         font-family: 'Montserrat-rus';
         width: calc(var(--index) * 15);
     }

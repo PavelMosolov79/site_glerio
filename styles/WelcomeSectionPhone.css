@@ -1,17 +1,17 @@
-@media (min-width: 761px) {
+@media (max-width: 761px) {
     :root {
         --index: calc(1vw + 1vh);
     }
 
     .welcome{
         width: 100%;
-        height: 100vh;
+        height: 70vh;
         display: flex;
         background-color: #ECECEC;
     }
 
     .welcome__image{
-        width: calc(var(--index) * 40);
+        width: calc(var(--index) * 20);
         height: calc(var(--index) * 40);
         padding: calc(var(--index) * 5) calc(var(--index) * 1);
     }
@@ -22,8 +22,8 @@
     }
 
     .doe__welcome img{
-        width: 30vw;
-        height: 50vh;
+        width: 200px;
+        height: 200px;
     }
 
     .svg__elipses{
@@ -33,14 +33,14 @@
 
     .svg__elipses img{
         opacity: 0.4;
-        width: 50%;
-        height: calc(var(--index) * 6);
+        width: 200px;
+        height: 100px;
     }
 
     .welcome__text{
         width: 50%;
-        height: 100vh;
-        padding: calc(var(--index) * 5) calc(var(--index) * 3);
+        height: 50vh;
+        padding: calc(var(--index) * 5) calc(var(--index) * 1);
     }
 
     .welcome__text-main__hello{
@@ -51,6 +51,7 @@
     .welcome__text-main__hello-text{
         width: 50%;
         line-height: 20px;
+        padding-right: 5px;
     }
 
     .welcome__text-main__hello-text h3{
@@ -71,14 +72,13 @@
 
     .welcome__text-main__hello-svg img{
         width: 100%;
-        height: calc(var(--index) * 5);
+        height: 100px;
         object-fit: cover;
     }
 
     .welcome__text-p{
         height: 50vh;
-        width: 90%;
-        padding: calc(var(--index) * 0) calc(var(--index) * 2);
+        width: 100%;
     }
 
     .welcome__text-p p{

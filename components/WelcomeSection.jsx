@@ -5,7 +5,7 @@ const WelcomeSection = ({ func }) => {
     <div className="welcome">
       <div className="welcome__image">
         <div className="doe__welcome">
-            <img/>
+            <img src="./welcome.png"/>
         </div>
         <div className="svg__elipses">
             <img src="/svg-files/elipses.svg"/>
@@ -14,8 +14,7 @@ const WelcomeSection = ({ func }) => {
       <div className="welcome__text">
         <div className="welcome__text-main__hello">
             <div className="welcome__text-main__hello-text">
-                <h3>ДОБРО</h3>
-                <h3>ПОЖАЛОВАТЬ</h3>
+                <h3>ДОБРО<br/>ПОЖАЛОВАТЬ</h3>
                 <h2>В <a style={{backgroundColor: '#FFBD0C'}}>ГАЛЕРЕЮ</a></h2>
             </div>
             <div className="welcome__text-main__hello-svg">
