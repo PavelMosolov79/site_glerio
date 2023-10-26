@@ -5,13 +5,13 @@
 
     .welcome{
         width: 100%;
-        height: 70vh;
+        height: 80vh;
         display: flex;
         background-color: #ECECEC;
     }
 
     .welcome__image{
-        width: calc(var(--index) * 20);
+        width: calc(var(--index) * 16);
         height: calc(var(--index) * 40);
         padding: calc(var(--index) * 5) calc(var(--index) * 1);
     }
@@ -22,8 +22,8 @@
     }
 
     .doe__welcome img{
-        width: 200px;
-        height: 200px;
+        width: 160px;
+        height: 160px;
     }
 
     .svg__elipses{
@@ -33,7 +33,7 @@
 
     .svg__elipses img{
         opacity: 0.4;
-        width: 200px;
+        width: 140px;
         height: 100px;
     }
 
@@ -63,7 +63,6 @@
         text-align: right;
         font-size: calc(var(--index) * 1.5);
         line-height: 0px;
-        background-color: antiquewhite;
     }
 
     .welcome__text-main__hello-svg{
