@@ -63,11 +63,13 @@
         text-align: right;
         font-size: calc(var(--index) * 1.5);
         line-height: 0px;
+        background-color: antiquewhite;
     }
 
     .welcome__text-main__hello-svg{
         width: 50%;
         opacity: 0.4;
+        padding-left: 10px;
     }
 
     .welcome__text-main__hello-svg img{
