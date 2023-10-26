@@ -86,9 +86,9 @@ const ProductionSection = ({ projects }) => {
               <button className="main__container-header__layout-dropbtn" onClick={toggleMenu}>
                 <img src="./svg-files/menu.svg" alt="button menu"/>
               </button>
-              <div className="menu__drop">
+              <div className="menu__drop" style={{ display: isMenuOpen ? 'block' : 'none' }}>
                 {isMenuOpen && (
-                  <div class="main__container-header__layout-dropdown-content">
+                  <div className="main__container-header__layout-dropdown-content">
                     <ul>
                       <li>        
                         <Link href={`/`}>Города и поселки</Link>

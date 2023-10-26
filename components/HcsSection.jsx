@@ -85,7 +85,7 @@ const ProjectSection = () => {
               </button>
               <div className="menu__drop">
                 {isMenuOpen && (
-                  <div class="main__container-header__layout-dropdown-content">
+                  <div className="main__container-header__layout-dropdown-content">
                     <ul>
                       <li>        
                         <Link href={`/`}>Города и поселки</Link>
