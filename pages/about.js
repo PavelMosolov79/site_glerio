@@ -44,7 +44,7 @@ export default function About() {
             {project.description !== 'none' && <p>{project.description}</p>}
             <div className='aboyt__layout-photos'>
                 <div className='about__main-photo'>
-                    {project.image && <img src={project.image} alt={`Главное фото`} onClick={() => openModal(project.image)}/>}
+                    {project.image && <img src={project.image} alt={`Главное фото`}/>}
                 </div>
                 <div className='about__main-mini__photo' style={{ display: project.photo[0]?.path === 'none' ? 'none' : 'block' }}>
                     {project.photo[0] && project.photo[0].path !== 'none' && (

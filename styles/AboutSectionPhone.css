@@ -101,6 +101,7 @@
 
     .about__video video{
         display: flex;
+        width: 80%;
     }
 
     .about__information{
@@ -154,6 +155,7 @@
         width: calc(var(--index) * 10);
         height: calc(var(--index) * 10);
     }
+
 
     .modal {
         display: block;
