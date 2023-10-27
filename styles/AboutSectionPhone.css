@@ -71,20 +71,24 @@
     }
 
     .about__main-photo img{
-        width: calc(var(--index) * 35);
+        width: calc(var(--index) * 30);
         height: calc(var(--index) * 31);
         object-fit: cover;
     }
 
     .about__main-mini__photo{
         margin: 5px 0px;
-        width: calc(var(--index) * 15);
+        display: flex !important;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
         cursor: pointer;
     }
 
     .about__main-mini__photo img{
         width: calc(var(--index) * 15);
         height: calc(var(--index) * 10);
+        margin: 5px;
     }
 
     .about__video-layout{
