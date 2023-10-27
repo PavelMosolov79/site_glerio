@@ -49,7 +49,7 @@ export default function About() {
                 <div className='about__main-mini__photo' style={{ display: project.photo[0]?.path === 'none' ? 'none' : 'block' }}>
                     {project.photo[0] && project.photo[0].path !== 'none' && (
                         project.photo.map((photo, index) => (
-                            <img key={index} src={photo.path} alt={`Фото ${index + 1}`} onClick={() => openModal(project.image)}/>
+                            <img key={index} src={photo.path} alt={`Фото ${index + 1}`} onClick={() => openModal(photo.path)}/>
                         ))
                     )}
                 </div>
