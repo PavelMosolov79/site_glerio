@@ -2,7 +2,7 @@
 import Link from "next/link"
 import React, { useState} from 'react';
 
-const AboutSection = ({ func }) => {
+const AboutSection = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {

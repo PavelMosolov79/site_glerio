@@ -1,6 +1,6 @@
 // import "./SectionPhone.css";
 
-const WelcomeSection = ({ func }) => {
+const WelcomeSection = () => {
   return (
     <div className="welcome">
       <div className="welcome__image">

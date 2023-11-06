@@ -1,8 +1,13 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import projectsData from '../all_project.json';
+import client, { urlFor } from '../lib/client';
+//import sanityClient from '../sanityClient';
 
-const ProjectSection = ({ projects }) => {
+const ProjectSection = ({ posts }) => {
+
+    console.log('Posts ProjectSection:', posts); 
+
     const itemsPerPage = 9;
     const [displayedProjects, setDisplayedProjects] = useState([]);
     const [loadedCount, setLoadedCount] = useState(0);
@@ -76,15 +81,17 @@ const ProjectSection = ({ projects }) => {
             </div>
             <div className="project__blocks">
                 <div className="projects">
-                    {displayedProjects.map((project, index) => (
-                        <div className="project_block" key={index}>
-                            <Link href={`/about?id=${project.id}`}>
-                                <img src={project.image} alt={project.name} />
-                                <div className="project_block-img"></div>
-                                <h3>{project.name}</h3>
-                            </Link>
-                        </div>
-                    ))}
+                {posts.map((post, index) => (
+                <div className="project_block" key={index}>
+                    <Link href={`/about?id=${post.name}`} as={`/about/${post.name}`}>
+                    {post.image && (
+                        <img src={urlFor(post.image).url()} alt={post.name} />
+                    )}
+                    <div className="project_block-img"></div>
+                    <h3>{post.name}</h3>
+                    </Link>
+                </div>
+                ))}
                 </div>
             </div>
             <div className="button__do-block">

@@ -2,7 +2,7 @@ import Link from "next/link"
 
 import React from 'react';
 
-const FoterSection = ({ func }) => {
+const FoterSection = () => {
 
   return (
     <footer>
@@ -28,8 +28,10 @@ const FoterSection = ({ func }) => {
         </div>
         <div className="foter__block-logo">
           <div>
+            <Link href={`/studio`}>Для разработчиков</Link>
             <img src="./logo.png" alt="glerio"/>
             <a>©️ 2023 Copyright</a>
+            
           </div>
         </div>
       </div>

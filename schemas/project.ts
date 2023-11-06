@@ -60,7 +60,7 @@ export default {
       },
     },
     {
-      name: 'lamp',
+      name: 'lamps',
       title: 'Лампы',
       type: 'array',
       of: [
@@ -81,7 +81,7 @@ export default {
           ],
         },
       ],
-    },
+    },    
     {
       name: 'photo',
       title: 'Дополнительные фото',

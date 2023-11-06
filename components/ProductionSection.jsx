@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import projectsData from '../all_project.json';
 
-const ProductionSection = ({ projects }) => {
+const ProductionSection = () => {
   const itemsPerPage = 9;
   const [displayedProjects, setDisplayedProjects] = useState([]);
   const [loadedCount, setLoadedCount] = useState(0);
