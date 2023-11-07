@@ -4,6 +4,10 @@ export default function posts(req, res) {
     res.status(200).json({ name: 'John Doe'})
 }
 
+export function lamps(req, res) {
+    res.status(200).json({ name: 'John Doe'})
+}
+
 export async function loadPosts(start, end) {
     const query = `*[_type == 'project'] {
         name,

@@ -1,5 +1,5 @@
 // project.js
-import lamp from './lamp'; // Импорт схемы для ламп
+//import lamp from './lamp'; // Импорт схемы для ламп
 
 export default {
   name: 'project',
@@ -65,20 +65,8 @@ export default {
       type: 'array',
       of: [
         {
-          type: 'object',
-          fields: [
-            {
-              name: 'lamp',
-              title: 'Лампа',
-              type: 'reference',
-              to: [{ type: 'lamp' }],
-            },
-            {
-              name: 'quantity',
-              title: 'Количество',
-              type: 'number',
-            },
-          ],
+          type: 'reference',
+          to: [{ type: 'lamp' }],
         },
       ],
     },    

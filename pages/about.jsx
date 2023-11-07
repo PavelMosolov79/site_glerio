@@ -1,11 +1,11 @@
 import Link from 'next/link';
+
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
+
+import AboutSection from '../components/AboutSection'
+
 import imageUrlBuilder from '@sanity/image-url';
-
-import ProjectSection from '@/components/ProjectSection';
-
-// Импортируйте ваш клиент Sanity
 import { client } from '../lib/client';
 import {loadPosts} from './api/posts'
 
@@ -38,9 +38,6 @@ export default function About() {
         return <div>Проект не найден</div>;
     }
 
-
-    
-
     const openModal = (image) => {
         setSelectedImage(image);
         setIsModalOpen(true);
@@ -51,7 +48,6 @@ export default function About() {
         setIsModalOpen(false);
     };
 
-    // Функция для преобразования ссылок на изображения в URL
     const urlFor = (source) => {
         const builder = imageUrlBuilder(client);
         return builder.image(source);
@@ -63,6 +59,7 @@ export default function About() {
 
     return (
         <main className="About">
+            <AboutSection/>
             <div className="about__return">
                 <h2>Галерея</h2>
                 <Link className="about__return-link" href="/">Назад</Link>
@@ -124,14 +121,14 @@ export default function About() {
             <div className="about__lamp-blocks">
                 {post.lamps && post.lamps.map((lamp, index) => (
                     <div className="about__lamp-block" key={index}>
-                        <p>Название лампы: {lamp.lamp.name}</p>
-                        <p>Артикул: {lamp.lamp.article}</p>
+                        <p>Название лампы: {lamp.name}</p>
+                        <p>Артикул: {lamp.article}</p>
                         <p>Количество: {lamp.quantity}</p>
                         <div className="about__lamp-block__img">
-                            {lamp.lamp.image && (
+                            {lamp.image && (
                                 <img
-                                    src={urlFor(lamp.lamp.image).url()}
-                                    alt={lamp.lamp.name}
+                                    src={urlFor(lamp.image).url()}
+                                    alt={lamp.name}
                                 />
                             )}
                         </div>
@@ -142,7 +139,6 @@ export default function About() {
     );
 }
 
-// Эта функция вызывается на сервере и получает данные для страницы
 export const getServerSideProps = async () => {
     let posts_one = null
     try {
