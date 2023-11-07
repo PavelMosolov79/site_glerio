@@ -52,8 +52,8 @@ export default {
       type: 'string',
       options: {
         list: [
-          { title: 'Производство и промышленность', value: 'shop' },
-          { title: 'Офисы и магазины', value: 'production' },
+          { title: 'Производство и промышленность', value: 'production' },
+          { title: 'Офисы и магазины', value: 'shop' },
           { title: 'ЖКХ и прочее строительство', value: 'hcs' },
         ],
         initialValue: 'street',

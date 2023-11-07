@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import projectsData from '../all_project.json';
+import client, { urlFor } from '../lib/client';
+import project from '@/schemas/project';
 
 const ProjectSection = () => {
   const itemsPerPage = 9;
   const [displayedProjects, setDisplayedProjects] = useState([]);
   const [loadedCount, setLoadedCount] = useState(0);
   const [activeButton, setActiveButton] = useState('ВСЕ');
-
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [allProjects, setAllProjects] = useState([]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -24,90 +25,109 @@ const ProjectSection = () => {
     }
   };
 
-  const filterProjectsByCategory = (category) => {
-    const hcsProjects = projectsData.projects.filter((project) => project.activity === 'hcs');
-
+  const updateDisplayedProjects = (category) => {
     if (category === 'ВСЕ') {
-      return hcsProjects;
-    }
-
-    if (category === 'УЛИЦА') {
-      return hcsProjects.filter((project) => project.place === 'street');
+      const filteredProjects = allProjects.filter((project) => project.activity === 'hcs');
+      setDisplayedProjects(filteredProjects);
+    } else if (category === 'УЛИЦА') {
+      const filteredProjects = allProjects.filter((project) => project.activity === 'hcs' && project.place === 'street');
+      setDisplayedProjects(filteredProjects);
     } else if (category === 'ПОМЕЩЕНИЕ') {
-      return hcsProjects.filter((project) => project.place === 'room');
+      const filteredProjects = allProjects.filter((project) => project.activity === 'hcs' && project.place === 'room');
+      setDisplayedProjects(filteredProjects);
     } else if (category === 'ВИДЕО') {
-      return hcsProjects.filter((project) => project.video !== 'none');
+      const filteredProjects = allProjects.filter((project) => project.activity === 'hcs' && project.video !== 'none');
+      setDisplayedProjects(filteredProjects);
     }
-
-    return [];
   };
 
   const handleButtonClick = (buttonText) => {
     setActiveButton(buttonText);
-    const filteredProjects = filterProjectsByCategory(buttonText);
-    setDisplayedProjects(filteredProjects.slice(0, itemsPerPage));
-    setLoadedCount(itemsPerPage);
+    updateDisplayedProjects(buttonText);
   };
 
   useEffect(() => {
-    const initialBatch = filterProjectsByCategory('ВСЕ');
-    setDisplayedProjects(initialBatch.slice(0, itemsPerPage));
-    setLoadedCount(itemsPerPage);
+    client
+      .fetch(`*[_type == 'project'] {
+        name,
+        image,
+        video,
+        place,
+        data,
+        address,
+        activity,
+        "lamps": lamps[]->{
+            "name": name,
+            "article": article,
+            "href_lamp": href_lamp,
+            "image": image
+        },
+        photo[],
+        tasks,
+        description
+      }`)
+      .then((data) => {
+        setAllProjects(data);
+        const filteredData = data.filter((project) => project.activity === 'hcs');
+        setDisplayedProjects(filteredData);
+      })
+      .catch((error) => {
+        console.error('Error fetching data from Sanity:', error);
+      });
   }, []);
 
   return (
     <div className="project">
-      <div>
-        <header>
-          <div className="main__container-header__layout">
-            <div className="main__container-header__layout-logo">
-              <a href="/"><img src="./logo.png" alt="Glerio-portfolio"/></a>
-            </div>
-            <nav>
-              <ul>
-                <li>        
-                  <Link href={`/`}>Города и поселки</Link>
-                </li>
-                <li>
-                  <Link href={`/production`}>Производство и промышленность</Link>
-                </li>
-                <li>
-                  <Link href={`/shop`}>Офисы и магазины</Link>
-                </li>
-                <li>
-                  <Link href={`/hcs`} style={{textDecoration: "solid underline #FFBD0C 3px"}}>ЖКХ и прочее строительство</Link>
-                </li>
-              </ul>
-            </nav>
-            <div className="main__container-header__layout-dropdown">
-              <button className="main__container-header__layout-dropbtn" onClick={toggleMenu}>
-                <img src="./svg-files/menu.svg" alt="button menu"/>
-              </button>
-              <div className="menu__drop">
-                {isMenuOpen && (
-                  <div className="main__container-header__layout-dropdown-content">
-                    <ul>
-                      <li>        
-                        <Link href={`/`}>Города и поселки</Link>
-                      </li>
-                      <li>
-                        <Link href={`/production`}>Производство и<br/>промышленность</Link>
-                      </li>
-                      <li>
-                        <Link href={`/shop`}>Офисы и магазины</Link>
-                      </li>
-                      <li>
-                        <Link href={`/hcs`}>ЖКХ и прочее<br/>строительство</Link>
-                      </li>
-                    </ul>
-                  </div>
-                )}
-              </div>
+      <header>
+        <div className="main__container-header__layout">
+          <div className="main__container-header__layout-logo">
+            <a href="/"><img src="./logo.png" alt="Glerio-portfolio" /></a>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <Link href={`/`}>Города и поселки</Link>
+              </li>
+              <li>
+                <Link href={`/production`}  style={{ textDecoration: "solid underline #FFBD0C 3px" }}>Производство и промышленность</Link>
+              </li>
+              <li>
+                <Link href={`/shop`}>Офисы и магазины</Link>
+              </li>
+              <li>
+                <Link href={`/hcs`}>ЖКХ и прочее строительство</Link>
+              </li>
+            </ul>
+          </nav>
+          <div className="main__container-header__layout-dropdown">
+            <button className="main__container-header__layout-dropbtn" onClick={toggleMenu}>
+              <img src="./svg-files/menu.svg" alt="button menu" />
+            </button>
+            <div className="menu__drop">
+              {isMenuOpen && (
+                <div className="main__container-header__layout-dropdown-content">
+                  <ul>
+                    <li>
+                      <Link href={`/`}>Города и поселки</Link>
+                    </li>
+                    <li>
+                      <Link href={`/production`}>Производство и<br />промышленность</Link>
+                    </li>
+                    <li>
+                      <Link href={`/shop`}>Офисы и магазины</Link>
+                    </li>
+                    <li>
+                      <Link href={`/hcs`}>ЖКХ и прочее<br />строительство</Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
-        </header>
-      </div>
-      <h1 style={{backgroundColor: '#ABABAB', color: 'white' ,textAlign: 'center', marginBlockEnd: '0px', marginBlockStart: '0px'}}>ЖКХ и прочее строительство</h1>
+        </div>
+      </header>
+
+      <h1 style={{ backgroundColor: '#ABABAB', color: 'white', textAlign: 'center', marginBlockEnd: '0px', marginBlockStart: '0px' }}>ЖКХ и прочее строительство</h1>
       <div className="project__title">
         <div className="project__title-text">
           <h2>НАШИ <a style={{ backgroundColor: '#FFBD0C' }}>РАБОТЫ</a></h2>
@@ -116,9 +136,12 @@ const ProjectSection = () => {
       </div>
       <div className="project__buttons">
         {['ВСЕ', 'УЛИЦА', 'ПОМЕЩЕНИЕ', 'ВИДЕО'].map((buttonText) => (
-          <button key={buttonText}
+          <button
+            key={buttonText}
             className={activeButton === buttonText ? 'active' : ''}
-            onClick={() => handleButtonClick(buttonText)}>{buttonText}
+            onClick={() => handleButtonClick(buttonText)}
+          >
+            {buttonText}
           </button>
         ))}
       </div>
@@ -126,8 +149,10 @@ const ProjectSection = () => {
         <div className="projects">
           {displayedProjects.map((project, index) => (
             <div className="project_block" key={index}>
-              <Link href={`/about?id=${project.id}`}>
-                <img src={project.image} alt={project.name} />
+              <Link href={`/about?id=${project.name}`}>
+                {project.image && (
+                  <img src={urlFor(project.image).url()} alt={project.name} />
+                )}
                 <div className="project_block-img"></div>
                 <h3>{project.name}</h3>
               </Link>
